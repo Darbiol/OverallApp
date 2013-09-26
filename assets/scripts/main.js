@@ -73,9 +73,9 @@ var commentView = Backbone.View.extend({
 		this.remove();
 	},
 	increaseUpvote: function(){
-		//this.model.get() = this.model.toJSON().upvotes+1;
-		this.model.get('upvotes'); 
-		console.log(this.model.get('upvotes'));
+		//this.model.html();
+		var x = this.model.get('upvotes')+1; 
+		this.model.set({"upvote":x});
 	}
 });
 
